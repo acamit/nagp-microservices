@@ -4,3 +4,7 @@
 
 /.vs/BankApplication
 /AccountService/bin/Debug/netcoreapp2.2
+/AccountService/obj
+/ApiGateway/obj
+/CustomerService/obj
+/TransactionService/obj
