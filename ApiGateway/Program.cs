@@ -14,10 +14,14 @@ namespace ApiGateway
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-            .ConfigureAppConfiguration((host, config) =>
+            .ConfigureAppConfiguration((hostingContext, config) =>
             {
-                config.AddJsonFile("ocelot.json");
-                var hostingEnvironment = host.HostingEnvironment;
+                config.SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
+                          .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                          .AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true)
+                          .AddJsonFile("ocelot.json", optional: false, reloadOnChange: true)
+                          .AddEnvironmentVariables();
+                var hostingEnvironment = hostingContext.HostingEnvironment;
                 config.AddConfigServer(hostingEnvironment.EnvironmentName);
             }).UseStartup<Startup>();
     }
