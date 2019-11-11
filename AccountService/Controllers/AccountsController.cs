@@ -2,14 +2,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
-namespace CustomerService.Controllers
+namespace AccountService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class AccountsController : ControllerBase
     {
         ConfigSettings configSettings { get; set; }
-        public ValuesController(IOptions<ConfigSettings> settings)
+        public AccountsController(IOptions<ConfigSettings> settings)
         {
             configSettings = settings.Value;
         }
@@ -44,6 +44,17 @@ namespace CustomerService.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+        
+        [HttpGet("{id}")]
+        public void GetUserAccount(int id)
+        {
+
+        }
+        [HttpPost]
+        public void Create(object userDetails)
+        {
+
         }
     }
 }

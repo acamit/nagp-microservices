@@ -1,14 +1,14 @@
 {
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/api/values",
+      "DownstreamPathTemplate": "/api/accounts",
       "DownstreamScheme": "https",
       "UseServiceDiscovery": true,
       "ServiceName": "accountservice",
       "UpstreamPathTemplate": "/accountservice/{catchAll}"
     },
     {
-      "DownstreamPathTemplate": "/api/values",
+      "DownstreamPathTemplate": "/api/customers",
       "DownstreamScheme": "https",
       "UseServiceDiscovery": true,
       "ServiceName": "customerservice",
