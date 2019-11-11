@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29025.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApplication", "BankApplication\BankApplication.csproj", "{46555D10-F6C2-474A-9E75-C8F15C9DB7CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{BCF4A196-9936-4C92-92EF-358EE3C26E04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{BCF4A196-9936-4C92-92EF-358EE3C26E04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountService", "AccountService\AccountService.csproj", "{715B33F9-E8F3-4F39-93D2-AA010242DE17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountService", "AccountService\AccountService.csproj", "{715B33F9-E8F3-4F39-93D2-AA010242DE17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransactionService", "TransactionService\TransactionService.csproj", "{B6C5FC11-0C51-404E-AF6C-634EB76F4A5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionService", "TransactionService\TransactionService.csproj", "{B6C5FC11-0C51-404E-AF6C-634EB76F4A5B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerService", "CustomerService\CustomerService.csproj", "{5CDFC33D-34CF-4D7F-BAB5-9504DDD18651}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerService", "CustomerService\CustomerService.csproj", "{5CDFC33D-34CF-4D7F-BAB5-9504DDD18651}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{46555D10-F6C2-474A-9E75-C8F15C9DB7CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46555D10-F6C2-474A-9E75-C8F15C9DB7CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46555D10-F6C2-474A-9E75-C8F15C9DB7CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46555D10-F6C2-474A-9E75-C8F15C9DB7CC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BCF4A196-9936-4C92-92EF-358EE3C26E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BCF4A196-9936-4C92-92EF-358EE3C26E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCF4A196-9936-4C92-92EF-358EE3C26E04}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -8,3 +8,6 @@
 /ApiGateway/obj
 /CustomerService/obj
 /TransactionService/obj
+/ApiGateway/bin/Debug/netcoreapp2.2
+/CustomerService/bin/Debug/netcoreapp2.2
+/TransactionService/bin/Debug/netcoreapp2.2
