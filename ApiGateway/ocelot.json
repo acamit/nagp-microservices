@@ -22,6 +22,14 @@
       "ServiceName": "transactionservice",
       "UpstreamPathTemplate": "/transactionservice/{catchAll}",
       "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/api/values",
+      "DownstreamScheme": "https",
+      "UseServiceDiscovery": true,
+      "ServiceName": "loggingservice",
+      "UpstreamPathTemplate": "/loggingservice/{catchAll}",
+      "UpstreamHttpMethod": []
     }
   ],
   "GlobalConfiguration": {
@@ -33,44 +41,4 @@
     }
   }
 }
-/*{
-  "ReRoutes": [
-    {
-      "DownstreamPathTemplate": "/api/values",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7001
-        }
-      ],
-      "UpstreamPathTemplate": "/accountservice/{catchAll}"
-    },
-    {
-      "DownstreamPathTemplate": "/api/values",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7002
-        }
-      ],
-      "UpstreamPathTemplate": "/customerservice/{catchAll}"
-    },
-    {
-      "DownstreamPathTemplate": "/api/values",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7003
-        }
-      ],
-      "UpstreamPathTemplate": "/transactionservice/{catchAll}"
-    }
-  ],
-  "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:7000"
-  }
-}
-*/
+

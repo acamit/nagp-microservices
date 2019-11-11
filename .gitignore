@@ -11,3 +11,11 @@
 /ApiGateway/bin/Debug/netcoreapp2.2
 /CustomerService/bin/Debug/netcoreapp2.2
 /TransactionService/bin/Debug/netcoreapp2.2
+/bin/Debug
+/ApiGateway/Dockerfile.original
+/AccountService/Dockerfile.original
+/obj
+/CustomerService/Dockerfile.original
+/TransactionService/Dockerfile.original
+/LoggingService/bin/Debug/netcoreapp2.2
+/LoggingService/obj

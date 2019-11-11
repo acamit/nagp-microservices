@@ -1,0 +1,91 @@
+version: '3.4'
+
+services:
+  transactionservice:
+    image: ${DOCKER_REGISTRY-}transactionservice
+    build:
+      context: .
+      dockerfile: TransactionService/Dockerfile
+    expose:
+      - "80"
+    ports:
+      - "7003:80"
+    depends_on:
+      - eurekaserver
+      - configserver
+    hostname: transactionservice
+    container_name: transactionservice
+  eurekaserver:
+    image: acamit84/eureka-server
+    ports:
+      - "8761:8761"
+    container_name: eurekaserver
+  configserver:
+    image: acamit84/config-server
+    ports:
+      - "8888:8888"
+    hostname: configserver
+    container_name: configserver
+  customerservice:
+    image: ${DOCKER_REGISTRY-}customerservice
+    build:
+      context: .
+      dockerfile: CustomerService/Dockerfile
+    expose:
+      - "80"
+    ports:
+      - "7002:80"
+    depends_on:
+      - eurekaserver
+      - configserver
+    hostname: customerservice
+    container_name: customerservice
+
+
+  accountservice:
+    image: ${DOCKER_REGISTRY-}accountservice
+    build:
+      context: .
+      dockerfile: AccountService/Dockerfile
+    expose:
+      - "80"
+    ports:
+      - "7001:80"
+    depends_on:
+      - eurekaserver
+      - configserver
+    hostname: accountservice
+    container_name: accountservice
+
+
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
+    expose:
+      - "80"
+    ports:
+      - "7000:80"
+    depends_on:
+      - eurekaserver
+      - configserver
+    hostname: apigateway
+    container_name: apigateway
+
+
+  loggingservice:
+    image: ${DOCKER_REGISTRY-}loggingservice
+    build:
+      context: .
+      dockerfile: LoggingService/Dockerfile
+    expose:
+      - "80"
+    ports:
+      - "7004:80"
+    depends_on:
+      - eurekaserver
+      - configserver
+    hostname: loggingservice
+    container_name: loggingservice
+
